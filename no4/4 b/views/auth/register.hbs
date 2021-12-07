@@ -1,0 +1,31 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+<div class="alert alert-{{message.type}}" role="alert">
+  {{message.message}}
+</div>
+{{/if}}
+
+<div class="container">
+  <div class="login">
+    <div class="card-body">
+      <div class="container text-center ">
+        <form action="/register" method="post">
+          <div>
+            <h3 class="card-title text-center">Register</h3>
+            <p>Register to your account to discover the great futures</p>
+            <input type="text" name="name" placeholder="  input your Username">
+            <input type="email" name="email" placeholder="  input your email">
+          </div>
+          <div>
+            <input type="password" name="password" placeholder="  input your password">
+          </div>
+          <button type="submit" class="mt-4">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{>footer}}

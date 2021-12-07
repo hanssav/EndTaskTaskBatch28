@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">{{title}}</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Todo List</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {{#if isLogin}}
+          <div class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toogle mr-4"
+              role="button"
+              id="dropdownMenu"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img src="/public/img/user.png" alt="" class="img-avatar" />
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="/add-collection">Add Collection</a></li>
+              <li><a class="dropdown-item" href="/collection">List Collection</a></li>
+              <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+            </ul>
+          </div>
+        {{else}}
+          <li class="nav-item btn-auth">
+            <a class="btn-login" aria-current="page" href="/login">
+              <button type="button" class="btn">Login</button>
+            </a>
+          </li>
+          <li class="nav-item btn-auth">
+            <a class="btn-register" aria-current="page" href="/register">
+              <button type="button" class="btn ml-4">Register</button>
+            </a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

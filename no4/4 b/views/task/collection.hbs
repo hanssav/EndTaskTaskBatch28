@@ -1,0 +1,41 @@
+{{#if isLogin}}
+{{>head}}
+{{>navbar}}
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card" id="list1" style="padding: 50px; border-radius: 10px; background-color: #eef5ff; border: none">
+          <div class="card-body py-4 px-4 px-md-5">
+
+            <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+              <i class="fas fa-check-square me-1"></i>
+              <u>List Collection</u>
+                {{#each collections}}
+                  <li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                <p class="lead fw-normal mb-0">{{this.name}}</p>
+              </li>
+              <li class="fa list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                <div class="d-flex flex-row justify-content-end mb-1 mr-2">
+                <div class="icon d-flex flex-row justify-content-end mb-1">
+
+                  <a href="/edit-collection/{{this.id}}" class="text-info" data-mdb-toggle="tooltip" title="Edit todo">
+                    <i class="fa-solid fa-pen">edit</i>
+                  </a>
+                  <a href="/delete-collection/{{this.id}}" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo">
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
+                </div>
+                </div>
+                {{/each}}
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{>footer}}
+{{/if}}

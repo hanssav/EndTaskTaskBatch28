@@ -1,0 +1,29 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+<div class="alert alert-{{message.type}}" role="alert">
+  {{message.message}}
+</div>
+{{/if}}
+
+{{#if isLogin}}
+<div class="container">
+  <div class="login">
+    <div class="card-body">
+      <div class="container text-center ">
+        <form action="/add-collection" method="post">
+          <div>
+            <h3 class="card-title text-center">Add Collection</h3>
+            <p>Add your spesifik collection</p>
+            <input type="text" name="name" placeholder="input your new collection">
+          </div>
+          <button type="submit" class="mt-4">Add New Collection</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{{/if}}
+
+{{>footer}}

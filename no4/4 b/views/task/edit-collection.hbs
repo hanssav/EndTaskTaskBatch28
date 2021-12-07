@@ -1,0 +1,30 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+<div class="alert alert-{{message.type}}" role="alert">
+  {{message.message}}
+</div>
+{{/if}}
+{{#if isLogin}}
+<div class="container">
+  <div class="login">
+    <div class="card-body">
+      <div class="container text-center ">
+        <form action="/edit-collection/{{collection.id}}" method="post">
+            <input type="hidden" name="id" value="{{collection.id}}">
+          <div>
+            <h3 class="card-title text-center">Edit Collection</h3>
+            <input type="text" name="name" value="{{collection.name}}">
+          </div>
+            <button type="submit" class="mt-4">Update Collection</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/if}}
+
+{{>footer}}

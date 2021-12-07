@@ -1,0 +1,66 @@
+body {
+    font-family: "Oswald", sans-serif;
+    overflow-x: hidden;
+  }
+
+.icon{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+/* login */
+.img-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+.btn-auth{
+    padding: 3px 15px;
+    background-color: #4e95ff;
+    border-radius: 10px;
+    margin-right: 6px;
+}
+
+.card-body .img-content {
+    margin: 10px 0;
+  }
+
+  .login .card-body {
+    width: 50%;
+    margin: 50px auto;
+    /* justify-content: center; */
+    padding: 100px 0;
+    border-radius: 10px;
+    background-color:#c6ddff;
+  }
+
+  .login input {
+    width: 80%;
+    height: 35px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .login button,
+  .register button {
+    width: 80%;
+    height: 45px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #4e95ff;
+  }
+
+
+#list1 .form-control {
+    border-color: transparent;
+  }
+  #list1 .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  #list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #fbfbfb;
+  }

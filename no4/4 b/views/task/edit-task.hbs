@@ -1,0 +1,40 @@
+{{>head}}
+{{>navbar}}
+
+{{#if message}}
+<div class="alert alert-{{message.type}}" role="alert">
+  {{message.message}}
+</div>
+{{/if}}
+
+{{#if isLogin}}
+<div class="container">
+  <div class="login">
+    <div class="card-body">
+      <div class="container text-center ">
+        <form action="/edit-task/{{task.id}}" method="post">
+            <input type="hidden" name="id" value="{{task.id}}">
+          <div>
+            <h3 class="card-title text-center">Edit Task</h3>
+            <p>Edit Task</p>
+            <input type="text" name="name" value="{{task.name}}">
+          </div>
+          <div>
+            <p>Choose Collection</p>
+            <select class="select" name="id_collection">
+                {{#each tasks}}
+                <option value="{{this.id_collection}}">{{this.collection_name}}</option>
+                {{/each}}
+              </select>
+          </div>
+            <button type="submit" class="mt-4">Update Task</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{/if}}
+
+{{>footer}}
